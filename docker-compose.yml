@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    image: backtest-ml-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # Uncomment and set platform if needed:
+      # platform: linux/arm64/v8  # or linux/amd64 for production
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - .:/app

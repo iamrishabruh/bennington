@@ -1,0 +1,14 @@
+# .gitignore
+
+# Ignore Python cache directories
+__pycache__/
+*.py[cod]
+
+# Ignore local environment and config files containing secrets
+.env
+
+# If you store a big data file or logs, ignore them too
+*.log
+
+# If you have a venv directory in your project root
+venv/

@@ -1,0 +1,42 @@
+# config/config.yaml
+
+# Basic simulation parameters
+initial_cash: 100000
+commission: 0.001
+trade_size: 100
+ticker: "AAPL"
+historical_data: "data/historical_data.csv"
+
+# Risk management defaults
+stop_loss_pct: 0.02
+take_profit_pct: 0.04
+
+# Strategy thresholds for Advanced Strategy
+entry_threshold: 0.01
+exit_threshold: 0.005
+
+# Parameter ranges for optimization (example values)
+opt_entry_thresholds: [0.005, 0.01, 0.015]
+opt_exit_thresholds: [0.0025, 0.005, 0.0075]
+opt_base_trade_sizes: [50, 100, 150]
+
+# Alpha Vantage settings
+alpha_vantage:
+  key: "ENV_ALPHA_VANTAGE_KEY"  # Placeholder
+  function: "TIME_SERIES_INTRADAY"
+  interval: "5min"
+  outputsize: "full"
+
+# News API settings
+news_api:
+  key: "ENV_NEWS_API_KEY"       # Placeholder
+  url: "https://newsapi.org/v2/everything"
+
+# Kafka settings (use environment placeholders)
+kafka:
+  bootstrap_servers: "ENV_BOOTSTRAP_SERVERS"
+  topic: "stock-data"
+  security_protocol: "SASL_SSL"
+  sasl_mechanism: "PLAIN"
+  sasl_plain_username: "ENV_KAFKA_USERNAME"
+  sasl_plain_password: "ENV_KAFKA_PASSWORD"

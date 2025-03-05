@@ -1,0 +1,12 @@
+alpha_vantage
+kafka-python
+pandas
+backtesting
+PyYAML
+streamlit
+plotly
+tensorflow-cpu
+scikit-learn
+matplotlib
+nltk
+watchdog
