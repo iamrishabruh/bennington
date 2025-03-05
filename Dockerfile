@@ -14,7 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 
 # Expose the default port for Streamlit
-EXPOSE 8501
+EXPOSE 8080
 
 # Set the default command to run your Streamlit UI
-CMD ["streamlit", "run", "ui/app.py", "--server.address=0.0.0.0"]
+CMD streamlit run ui/app.py --server.address=0.0.0.0 --server.port=${PORT:-8080}
+
