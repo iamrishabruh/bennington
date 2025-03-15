@@ -17,23 +17,25 @@ This production-ready tool ingests enriched historical data via Alpha Vantage an
    - Edit `config/config.yaml` with your API keys, Kafka settings, and simulation parameters.
 
 3. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
+      ```bash
+      pip install -r requirements.txt
+      ```
 
 4. **Data Ingestion:**
-   - Run the ingestion script to fetch and enrich historical data:
-   ```bash
-   python data_ingestion/producer.py
-   ```
-   - This script fetches data from Alpha Vantage, enriches it with news sentiment from NewsAPI, publishes each record to Kafka, and saves all data to data/historical_data.csv.
 
-5. **Launch the User Interface:**
-```bash
-streamlit run ui/app.py
-```
-- Use the sidebar to trigger data ingestion, train the ML model, or run a backtest.
+   Run the ingestion script to fetch and enrich historical data:
+      ```bash
+      python data_ingestion/producer.py
+      ```
+   This script fetches data from Alpha Vantage, enriches it with news sentiment from NewsAPI, publishes each record to Kafka, and saves all data to data/historical_data.csv.
 
-6. **Backtesting & ML:**
-- Adjust strategy parameters (e.g., moving average windows) via the UI.
-- Run backtests to see simulated trade performance.
-- Train the ML model to forecast future prices and help refine strategies.
+6. **Launch the User Interface:**
+      ```bash
+      streamlit run ui/app.py
+      ```
+   Use the sidebar to trigger data ingestion, train the ML model, or run a backtest.
+
+7. **Backtesting & ML:**
+   - Adjust strategy parameters (e.g., moving average windows) via the UI.
+   - Run backtests to see simulated trade performance.
+   - Train the ML model to forecast future prices and help refine strategies.
